@@ -1,0 +1,36 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-size: 0.875rem;
+}
+
+.label {
+  color: var(--muted-foreground, #64748b);
+}
+
+.value {
+  font-weight: 600;
+  color: var(--primary, #6366f1);
+}
+
+.track {
+  width: 100%;
+  background-color: var(--muted, #f1f5f9);
+  border-radius: 9999px;
+  height: 0.5rem;
+  overflow: hidden;
+}
+
+.fill {
+  background-color: var(--primary, #6366f1);
+  height: 100%;
+  border-radius: 9999px;
+  transition: width 0.5s ease-in-out;
+}

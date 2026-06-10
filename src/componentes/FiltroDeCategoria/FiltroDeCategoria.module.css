@@ -1,0 +1,36 @@
+.container {
+  display: flex;
+  gap: 0.5rem;
+  overflow-x: auto;
+  padding-bottom: 0.5rem;
+  scrollbar-width: none; 
+}
+
+.container::-webkit-scrollbar {
+  display: none; 
+}
+
+.button {
+  padding: 0.5rem 1rem;
+  border-radius: 0.5rem;
+  white-space: nowrap;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background-color 0.2s, color 0.2s;
+}
+
+.active {
+  background-color: var(--primary, #6366f1);
+  color: var(--primary-foreground, #ffffff);
+  border: 1px solid var(--primary, #6366f1);
+}
+
+.inactive {
+  background-color: var(--card, #ffffff);
+  border: 1px solid var(--border, #e2e8f0);
+  color: var(--foreground, #0f172a);
+}
+
+.inactive:hover {
+  background-color: var(--accent, #f1f5f9);
+}
