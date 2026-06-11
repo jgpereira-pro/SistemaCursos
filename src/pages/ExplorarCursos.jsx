@@ -9,7 +9,7 @@ import styles from "./ExplorarCursos.module.css";
 
 const categories = ["Todos", "Tecnologia", "Design", "Marketing", "Negócios", "Arte"];
 
-export function ExploreCourses() {
+export function ExplorarCursos() {
   const [activeCategory, setActiveCategory] = useState("Todos");
   const [query, setQuery] = useState("");
 

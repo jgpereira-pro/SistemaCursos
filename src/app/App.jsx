@@ -3,13 +3,13 @@ import { LoginPage } from "../pages/LoginPage.jsx";
 import { Sidebar } from "../componentes/sidebar/index.jsx";
 import { Header } from "../componentes/header/index.jsx";
 import { Footer } from "../componentes/footer/index.jsx";
-import { MyLearning } from "../pages/MyLearning.jsx";
-import { ExploreCourses } from "../pages/ExploreCourses.jsx";
+import { MeusCursos } from "../pages/MeusCursos.jsx";
+import { ExplorarCursos } from "../pages/ExplorarCursos.jsx"; // CORRIGIDO
 import { Settings } from "../pages/Settings.jsx";
 
 export default function App() {
   const [isLoggedIn, setIsLoggedIn] = useState(false);
-  const [currentPage, setCurrentPage] = useState("my-learning");
+  const [currentPage, setCurrentPage] = useState("meus-cursos"); // CORRIGIDO
   const [sidebarOpen, setSidebarOpen] = useState(true);
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
 
@@ -18,8 +18,8 @@ export default function App() {
   }
 
   const pageMap = {
-    "my-learning": <MyLearning />,
-    "courses": <ExploreCourses />,
+    "meus-cursos": <MeusCursos />,
+    "cursos": <ExplorarCursos />, // CORRIGIDO
     "settings": <Settings />,
   };
 
