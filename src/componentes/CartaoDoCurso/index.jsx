@@ -1,49 +1,34 @@
-import { FileText, Clock, Users } from "lucide-react";
-import { BarraDeProgresso } from "../BarraDeProgresso";
-import { Button } from "../button"; 
+import { BarraDeProgresso } from "../BarraDeProgresso/index.jsx";
 import styles from "./CartaoDoCurso.module.css";
 
-export function CartaoDoCurso ({ course }) {
+export function CartaoDoCurso({ course }) {
   return (
-    <div className={styles.card}>
-      <div className={styles.imageWrapper}>
-        <img
-          src={course.thumbnail}
-          alt={course.title}
-          className={styles.thumbnail}
-        />
-        <div className={styles.badge}>
-          {course.category}
-        </div>
-      </div>
+    <div className={styles.courseCard}>
+      <img 
+        src={course.image || course.thumbnail} 
+        alt={`Capa do curso ${course.title}`} 
+        className={styles.courseImage}
+      />
       
-      <div className={styles.content}>
-        <h3 className={styles.title}>{course.title}</h3>
-        <p className={styles.instructor}>{course.instructor}</p>
-
-        <div className={styles.statsContainer}>
-          <span className={styles.statItem}>
-            <FileText className={styles.icon} />
-            {course.lessons} aulas
-          </span>
-          <span className={styles.statItem}>
-            <Clock className={styles.icon} />
-            {course.duration}
-          </span>
-          <span className={styles.statItem}>
-            <Users className={styles.icon} />
-            {course.students.toLocaleString()}
-          </span>
+      <div className={styles.courseContent}>
+        <div className={styles.courseHeader}>
+          <h3 className={styles.courseTitle}>{course.title}</h3>
+          <p className={styles.courseInstructor}>{course.instructor}</p>
         </div>
 
-        <div className={styles.footer}>
-          {course.progress > 0 ? (
-            <BarraDeProgresso progress={course.progress} />
-          ) : (
-            <Button className={styles.startButton}>
-              Começar Curso
-            </Button>
-          )}
+        {/* Aqui estava a duplicação! Agora o Cartão apenas chama a Barra, 
+            e a Barra decide como desenhar o texto e os números internamente. */}
+        <div className={styles.progressContainer}>
+          <BarraDeProgresso progresso={course.progress} />
+        </div>
+
+        <div className={styles.courseFooter}>
+          <div className={styles.courseMeta}>
+            <span>📄 {course.lessons} aulas</span>
+            <span>•</span>
+            <span>⏱️ {course.duration}</span>
+          </div>
+          <button className={styles.continueButton}>Continuar</button>
         </div>
       </div>
     </div>

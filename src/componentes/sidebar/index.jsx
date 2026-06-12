@@ -2,8 +2,8 @@ import { BookOpen, GraduationCap, Settings, Menu, X, LogOut } from "lucide-react
 import styles from "./Sidebar.module.css";
 
 const navigation = [
-  { name: "Meus Cursos", icon: BookOpen, page: "my-learning" },
-  { name: "Explorar Cursos", icon: GraduationCap, page: "courses" },
+  { name: "Meus Cursos", icon: BookOpen, page: "meus-cursos" },
+  { name: "Explorar Cursos", icon: GraduationCap, page: "cursos" },
   { name: "Configurações", icon: Settings, page: "settings" },
 ];
 

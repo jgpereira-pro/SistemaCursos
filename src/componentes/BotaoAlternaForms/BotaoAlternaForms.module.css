@@ -1,0 +1,48 @@
+.footerText {
+  text-align: center;
+  font-size: 0.875rem;
+  line-height: 1.25rem;
+  color: var(--muted-foreground);
+  margin-top: 1.5rem;
+  width: 100%;
+  display: block;
+}
+
+.link {
+  font-size: 0.875rem;
+  color: var(--primary);
+  text-decoration: none;
+  transition: color 0.2s;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 0;
+  margin: 0;
+  display: inline;
+}
+
+.link:hover {
+  color: rgba(var(--primary), 0.8);
+}
+
+.linkBold {
+  font-weight: 600;
+}
+
+/* Nova classe específica para o link de esquecer a senha */
+.esqueceuSenha {
+  font-size: 0.875rem;
+  font-weight: 500;
+  color: var(--primary);
+  text-decoration: none;
+  transition: color 0.2s;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 0;
+  margin: 0;
+}
+
+.esqueceuSenha:hover {
+  color: rgba(var(--primary), 0.8);
+}
