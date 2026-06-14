@@ -5,7 +5,7 @@ import { Header } from "../componentes/header/index.jsx";
 import { Footer } from "../componentes/footer/index.jsx";
 import { MeusCursos } from "../pages/MeusCursos.jsx";
 import { ExplorarCursos } from "../pages/ExplorarCursos.jsx"; // CORRIGIDO
-import { Settings } from "../pages/Settings.jsx";
+import { Configuracoes } from "../pages/Configuracoes.jsx";
 
 export default function App() {
   const [isLoggedIn, setIsLoggedIn] = useState(false);
@@ -20,7 +20,7 @@ export default function App() {
   const pageMap = {
     "meus-cursos": <MeusCursos />,
     "cursos": <ExplorarCursos />, // CORRIGIDO
-    "settings": <Settings />,
+    "settings": <Configuracoes />,
   };
 
   return (
