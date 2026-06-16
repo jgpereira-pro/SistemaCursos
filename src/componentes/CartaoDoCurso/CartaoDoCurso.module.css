@@ -56,7 +56,6 @@
   color: #64748b;
 }
 
-/* O container principal da barra de progresso foi mantido para dar o espaçamento */
 .progressContainer {
   display: flex;
   flex-direction: column;

@@ -1,10 +1,8 @@
 import { useState } from "react";
 import { courses } from "../app/data/courses.js";
-
 import { BarraDeBusca } from "../componentes/BarraDeBusca/index.jsx";
 import { FiltroDeCategoria } from "../componentes/FiltroDeCategoria/index.jsx";
 import { CartaoDoCurso } from "../componentes/CartaoDoCurso/index.jsx";
-
 import styles from "./ExplorarCursos.module.css";
 
 const categories = ["Todos", "Tecnologia", "Design", "Marketing", "Negócios", "Arte"];
